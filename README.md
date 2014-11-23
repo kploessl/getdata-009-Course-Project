@@ -21,21 +21,35 @@ You should create one R script called run_analysis.R that does the following:
 5) From the data set in step 4, creates a second, independent tidy data set 
    with the average of each variable for each activity and each subject
 
-
 #My Approach
-## Read in Activity Labels to a data frame and name the columns
-## Read in Features to a data frame
-## Read in X_test data to a data frame
-## Assign column names to X_test data using the Features data
-## Select only the measures for mean or stand deviation by filtering on columns with 'mean' or 'std' using dplyr
-## Read in subject_test.txt and subject_train.txt to data frames and name the columns
-## Add the SubjectID column to X_test and X_train
-## Read in Activity Labels from y_test.txt and y_train.txt to data frames
-## Make a new table by joining the ActivityID table with the ActivityLabels table using the join functionality in plyr
-## Combine X_test and X_train data with the corresponding ActivityID and ActivityName columns
-## Combine X_test and X_train into one data frame
-## Reshape the table using melt to make it easier to average each variable
-## Get the mean of each variable by Subject and ActivityName
-## Write SummaryData to a text file for uploading
+## Step 1: Read Activity Labels and Features metadata shared by both test and train data
+- Read in Activity Labels to a data frame and name the columns
+- Read in Features to a data frame
+
+## Step 2: Read test and train data and apply column names
+- Read in test and train data to data frames
+- Assign column names to test and train data using the Features data
+
+## Step 3: Create a subset of each data frame with mean and std variables only
+- Select only the measures for mean or stand deviation by filtering on columns with 'mean' or 'std' using dplyr
+
+## Step 4: Bind SubjectID data to data sets
+- Read in subject_test.txt and subject_train.txt to data frames and name the columns
+- Add the SubjectID column to X_test and X_train
+
+## Step 5: Bind Activity labels to data sets
+- Read in Activity Labels from y_test.txt and y_train.txt to data frames
+- Make a new table by joining the ActivityID table with the ActivityLabels table using the join functionality in plyr
+- Combine X_test and X_train data with the corresponding ActivityID and ActivityName columns
+
+## Step 6: Combine test and train data
+- Combine X_test and X_train into one data frame
+
+## Step 7: Summarize data
+- Reshape the table using melt to make it easier to average each variable
+- Get the mean of each variable by Subject and ActivityName
+
+## Step 8: Write summary to a text file
+- Write SummaryData to a text file for uploading
 
 
