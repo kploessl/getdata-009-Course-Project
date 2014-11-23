@@ -1,6 +1,7 @@
 New variables created for the final Summary Data set:
 - ActivityName (taken from Activity label data)
 - SubjectID (taken from the Subject label data)
+- I have retained the original names of each of the variables from the original dataset, but they now reflect the measurement aggregated at the level of ActivityName and SubjectID
 
 R packages required to run the code:
 plyr
