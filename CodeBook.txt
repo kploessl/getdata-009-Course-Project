@@ -1,0 +1,8 @@
+New variables created for the final Summary Data set:
+- ActivityName (taken from Activity label data)
+- SubjectID (taken from the Subject label data)
+
+R packages required to run the code:
+plyr
+dplyr
+reshape2
